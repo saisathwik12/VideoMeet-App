@@ -8,7 +8,7 @@ function App() {
 
 const handleCreateRoom = async (roomId) => {
   try {
-    const response = await fetch('http://localhost:5000/api/create-room', {
+    const response = await fetch('https://videomeet-app-nws3.onrender.com/api/create-room', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ const handleCreateRoom = async (roomId) => {
 
   const handleJoinRoom = async (roomId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/room/${roomId}`);
+      const response = await fetch(`https://videomeet-app-nws3.onrender.com/api/room/${roomId}`);
       const data = await response.json();
       
       if (response.ok) {

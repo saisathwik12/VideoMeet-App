@@ -12,7 +12,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000","https://sai-sathwik-video-meet-app.netlify.app/","https://videomeet-app-nws3.onrender.com"],
     methods: ["GET", "POST"]
   }
 });

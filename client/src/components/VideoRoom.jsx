@@ -30,7 +30,7 @@ const VideoRoom = ({ roomId, onLeaveRoom }) => {
       setLocalStream(stream);
 
       // Initialize socket
-      socketRef.current = io('http://localhost:5000');
+      socketRef.current = io('https://videomeet-app-nws3.onrender.com');
       webrtcRef.current.socket = socketRef.current;
 
       setupSocketListeners();
